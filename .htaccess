@@ -1,0 +1,38 @@
+RewriteEngine On
+RewriteBase /KUA/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^dashboard/?$ index.php?page=$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^masuk/?$ login.html?page=$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^cais/?$ views/cais/index.php?page=$1 [L]
+
+
+RewriteRule ^tambah_cais/?$ views/cais/tambah_cais.php
+RewriteRule ^proses_cais/?$ views/cais/proses_cais.php
+RewriteRule ^edit_cais/?$ views/cais/edit_cais.php
+RewriteRule ^hapus_cais/?$ views/cais/hapus_cais.php
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^cami/?$ views/cami/index.php?page=$1 [L]
+
+RewriteRule ^tambah_cami/?$ views/cami/tambah_cami.php
+RewriteRule ^proses_cami/?$ views/cami/proses_cami.php
+RewriteRule ^edit_cami/?$ views/cami/edit_cami.php
+RewriteRule ^hapus_cami/?$ views/cami/hapus_cami.php
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^penghulu/?$ views/penghulu/index.php?page=$1 [L]
+
+RewriteRule ^tambah_penghulu/?$ views/penghulu/tambah_penghulu.php
+RewriteRule ^proses_penghulu/?$ views/penghulu/proses_penghulu.php
+RewriteRule ^edit_penghulu/?$ views/penghulu/edit_penghulu.php
+RewriteRule ^hapus_penghulu/?$ views/penghulu/hapus_penghulu.php
